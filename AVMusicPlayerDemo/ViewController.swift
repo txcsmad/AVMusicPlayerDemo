@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import MediaPlayer
 
 var BarrelRollSound: SystemSoundID = 0
 var ErrorSound: SystemSoundID = 0
