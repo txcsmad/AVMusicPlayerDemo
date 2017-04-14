@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - Using AVAudioPlayer
+    // MARK: - Using AVAudioPlayer
     
     func playSound(fileName: String) {
         guard let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") else {
@@ -74,6 +74,9 @@ class ViewController: UIViewController {
     }
 
 }
+
+
+// MARK: - AVAudioPlayerDelegate
 
 extension ViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
