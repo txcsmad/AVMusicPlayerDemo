@@ -12,6 +12,12 @@
 		C982E2251E9D935E0039B4E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C982E2231E9D935E0039B4E1 /* Main.storyboard */; };
 		C982E2271E9D935E0039B4E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C982E2261E9D935E0039B4E1 /* Assets.xcassets */; };
 		C982E22A1E9D935E0039B4E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C982E2281E9D935E0039B4E1 /* LaunchScreen.storyboard */; };
+		C982E2341EA185FE0039B4E1 /* Mario-coin-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E2331EA185FE0039B4E1 /* Mario-coin-sound.mp3 */; };
+		C982E2361EA189FD0039B4E1 /* AIRHORN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E2351EA189FD0039B4E1 /* AIRHORN.mp3 */; };
+		C982E23B1EA18E890039B4E1 /* hey_listen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E2391EA18E890039B4E1 /* hey_listen.mp3 */; };
+		C982E23C1EA18E890039B4E1 /* inceptionhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E23A1EA18E890039B4E1 /* inceptionhorn.mp3 */; };
+		C982E23F1EA1912D0039B4E1 /* Barrel Roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E23E1EA1912D0039B4E1 /* Barrel Roll.mp3 */; };
+		C982E2411EA1937B0039B4E1 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C982E2401EA1937B0039B4E1 /* error.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		C982E2261E9D935E0039B4E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C982E2291E9D935E0039B4E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C982E22B1E9D935E0039B4E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C982E2331EA185FE0039B4E1 /* Mario-coin-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mario-coin-sound.mp3"; sourceTree = "<group>"; };
+		C982E2351EA189FD0039B4E1 /* AIRHORN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AIRHORN.mp3; sourceTree = "<group>"; };
+		C982E2391EA18E890039B4E1 /* hey_listen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hey_listen.mp3; sourceTree = "<group>"; };
+		C982E23A1EA18E890039B4E1 /* inceptionhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = inceptionhorn.mp3; sourceTree = "<group>"; };
+		C982E23E1EA1912D0039B4E1 /* Barrel Roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Barrel Roll.mp3"; sourceTree = "<group>"; };
+		C982E2401EA1937B0039B4E1 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		C982E21E1E9D935E0039B4E1 /* AVMusicPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C982E23D1EA18FEB0039B4E1 /* sounds */,
 				C982E21F1E9D935E0039B4E1 /* AppDelegate.swift */,
 				C982E2211E9D935E0039B4E1 /* ViewController.swift */,
 				C982E2231E9D935E0039B4E1 /* Main.storyboard */,
@@ -62,6 +75,19 @@
 				C982E22B1E9D935E0039B4E1 /* Info.plist */,
 			);
 			path = AVMusicPlayerDemo;
+			sourceTree = "<group>";
+		};
+		C982E23D1EA18FEB0039B4E1 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C982E2401EA1937B0039B4E1 /* error.mp3 */,
+				C982E23E1EA1912D0039B4E1 /* Barrel Roll.mp3 */,
+				C982E2331EA185FE0039B4E1 /* Mario-coin-sound.mp3 */,
+				C982E2351EA189FD0039B4E1 /* AIRHORN.mp3 */,
+				C982E2391EA18E890039B4E1 /* hey_listen.mp3 */,
+				C982E23A1EA18E890039B4E1 /* inceptionhorn.mp3 */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +152,12 @@
 			files = (
 				C982E22A1E9D935E0039B4E1 /* LaunchScreen.storyboard in Resources */,
 				C982E2271E9D935E0039B4E1 /* Assets.xcassets in Resources */,
+				C982E23B1EA18E890039B4E1 /* hey_listen.mp3 in Resources */,
+				C982E2361EA189FD0039B4E1 /* AIRHORN.mp3 in Resources */,
+				C982E2341EA185FE0039B4E1 /* Mario-coin-sound.mp3 in Resources */,
+				C982E2411EA1937B0039B4E1 /* error.mp3 in Resources */,
+				C982E23C1EA18E890039B4E1 /* inceptionhorn.mp3 in Resources */,
+				C982E23F1EA1912D0039B4E1 /* Barrel Roll.mp3 in Resources */,
 				C982E2251E9D935E0039B4E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +334,7 @@
 				C982E2301E9D935E0039B4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

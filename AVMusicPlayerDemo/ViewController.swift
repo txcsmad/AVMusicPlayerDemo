@@ -7,19 +7,83 @@
 //
 
 import UIKit
+import AVFoundation
+import MediaPlayer
+
+var BarrelRollSound: SystemSoundID = 0
+var ErrorSound: SystemSoundID = 0
 
 class ViewController: UIViewController {
-
+    
+    var players: [AVAudioPlayer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        registerSounds()
+    }
+    
+    
+    //MARK: - Using AVAudioPlayer
+    
+    func playSound(fileName: String) {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") else {
+            return
+        }
+        
+        let player = try! AVAudioPlayer(contentsOf: url)
+        player.delegate = self
+        players.append(player)
+        player.play()
+    }
+    
+    @IBAction func playCoin() {
+        playSound(fileName: "Mario-coin-sound")
+    }
+    
+    @IBAction func playHorn() {
+        playSound(fileName: "AIRHORN")
+    }
+    
+    @IBAction func playNavi() {
+        playSound(fileName: "hey_listen")
+    }
+    
+    @IBAction func playInception() {
+        playSound(fileName: "inceptionhorn")
+    }
+    
+    
+    // MARK: - Using System Sounds
+    
+    func registerSounds() {
+        if let songUrl = Bundle.main.url(forResource: "Barrel Roll", withExtension: "mp3") as CFURL? {
+            AudioServicesCreateSystemSoundID(songUrl, &BarrelRollSound)
+        }
+        
+        if let songUrl = Bundle.main.url(forResource: "error", withExtension: "mp3") as CFURL? {
+            AudioServicesCreateSystemSoundID(songUrl, &ErrorSound)
+        }
+    }
+    
+    @IBAction func playBarrelRoll() {
+        AudioServicesPlaySystemSound(BarrelRollSound)
+    }
+    
+    @IBAction func playError() {
+        AudioServicesPlaySystemSound(ErrorSound)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension ViewController: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        for x in 0..<players.count {
+            if players[x] == player {
+                players.remove(at: x)
+                return
+            }
+        }
     }
-
-
 }
 
